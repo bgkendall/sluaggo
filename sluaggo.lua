@@ -1,7 +1,7 @@
 sluaggo = {};
 
 
-local utf8case = require("utf8case")
+require("utf8case")
 require("sluggo_ranges")
 
 
@@ -66,7 +66,7 @@ function sluaggo.sluaggo(s, options)
         n = n .. separator;
       end
     else
-      n = n .. utf8case.lowerchar(utf8.char(code));
+      n = n .. utf8.lowerchar(utf8.char(code));
     end
     lastBad = bad;
   end
