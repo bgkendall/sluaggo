@@ -1,7 +1,6 @@
 utf8case = {}
 
 
-local utf8 = require("utf8")
 require("utf8data")
 
 
