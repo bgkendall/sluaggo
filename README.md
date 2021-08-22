@@ -1,2 +1,3 @@
 # sluaggo
-Sluggo slug generator implemented in Lua
+
+[Sluggo slug generator](https://github.com/apostrophecms/sluggo) implemented in Lua.
