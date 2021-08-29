@@ -32,7 +32,7 @@ Copy the following files to a directory in which Lua will look for packages:
 Or, add the `sluaggo` directory to your shell’s `LUA_PATH`:
 
 ```bash
-export LUA_PATH='$HOME/some/dir/sluaggo;;'
+export LUA_PATH='$HOME/some/dir/sluaggo/?.lua;;'
 ```
 
 (Note the [double semicolon][pkgpath].)
