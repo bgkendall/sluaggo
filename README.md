@@ -4,6 +4,7 @@
 not limited to) use in [Pandoc filters][pandoc].
 
 
+
 ## References
 
  * [sluggo.js][sluggo]
@@ -18,16 +19,20 @@ not limited to) use in [Pandoc filters][pandoc].
 [pkgpath]: http://www.lua.org/manual/5.3/manual.html#pdf-package.path
 
 
+
 ## Installation
 
 Copy the following files to a directory in which Lua will look for packages:
 
  * `sluaggo.lua`
  * `sluggo_ranges.lua`
- * `utf8case.lua`
+ * *`utf8case.lua`*
  * *`utf8data.lua`*
 
-(Note that `utf8data.lua` is not required if this file is already in the package path.)
+#### Notes:
+
+ * `utf8case.lua` and `utf8data.lua` are not required when running inside Pandoc
+ * `utf8data.lua` is not required if this file is already in the package path
 
 Or, add the `sluaggo` directory to your shell’s `LUA_PATH`:
 
@@ -44,6 +49,7 @@ package.path = os.getenv('HOME')..'/some/dir/sluaggo/?.lua;'..package.path
 ```
 
 
+
 ## Usage
 
 ```lua
@@ -58,6 +64,8 @@ Outputs:
 ```
 monkey-s-are-elab-orate-fools
 ```
+
+
 
 ## Options
 
@@ -94,4 +102,20 @@ Outputs:
 
 ```
 monkey-s-are-elab؉؉orate-fools
+```
+
+
+
+## Testing
+
+### Standalone
+
+```
+lua test/test.lua
+```
+
+### Pandoc
+
+```
+pandoc --pdf-engine=xelatex -o test.pdf --lua-filter test/test.lua README.md
 ```

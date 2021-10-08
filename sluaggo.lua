@@ -1,8 +1,16 @@
 sluaggo = {};
 
 
-require("utf8case")
 require("sluggo_ranges")
+
+if pandoc ~= nil then
+    if not utf8.lowerchar then
+        -- Use Pandoc's UTF-aware lowercase function
+        utf8.lowerchar = pandoc.text.lower
+    end
+else
+    require("utf8case")
+end
 
 
 function sluaggo.sluaggo(s, options)

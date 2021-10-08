@@ -52,3 +52,5 @@ assert(s == '日本のmonkey-s-are-elab-orate-バカーー',
 s = sluaggo.sluaggo('日本のmoЙҜeY\'s ÃṜɆ ΣlΑb؉؉oЯАТe バカーー## ')
 assert(s == '日本のmoйҝey-s-ãṝɇ-σlαb-oяатe-バカーー',
        'FAILED: slugifies a complex unicode string with non-English uppercase [\"' .. s .. '\"]')
+
+print("Sluaggo tests completed successfully!")
