@@ -53,7 +53,7 @@ package.path = os.getenv('HOME')..'/some/dir/sluaggo/?.lua;'..package.path
 ## Usage
 
 ```lua
-local slugago = require('sluaggo')
+local sluaggo = require('sluaggo')
 
 s = sluaggo.sluaggo('@ monkey\'s are elab؉؉orate fools##')
 print(s)
@@ -74,7 +74,7 @@ monkey-s-are-elab-orate-fools
 Change the string separator by passing a string (usually one character) to `separator`.
 
 ```lua
-local slugago = require('sluaggo')
+local sluaggo = require('sluaggo')
 
 s = sluaggo.sluaggo('monkey\'s are elaborate fools', { separator = ','})
 print(s)
